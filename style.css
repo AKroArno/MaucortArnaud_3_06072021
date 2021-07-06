@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "shrikhand";
+  src: url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+}
+@font-face {
+  font-family: "roboto";
+  src: url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+}
+/******************** règles communes **********************/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  font-family: "shrikhand", Arial, Helvetica, sans-serif;
+  list-style-type: none;
+}
+h3 {
+  font-style: bold;
+}
+/********************************* header **********************/
+.logo__header {
+  display: flex;
+  justify-content: center;
+  padding: 3.2vh 0 2.2vh 0;
+}
+/******************************** main **************************/
+#link_map {
+  height: 55px;
+  width: 100%;
+  background-color: #99e2d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2 rem;
+}
+.fa-map-marker-alt {
+  transform: translateX(-30px);
+}
+/******************************* boutton **************************/
+button {
+  height: 50px;
+  width: 220px;
+  background-color: #9356dc;
+  border-radius: 30px;
+}
+.button__main {
+  display: flex;
+  justify-content: center;
+}
+.article__pic {
+  background-color: #99e2d0;
+  padding: 2.7vh;
+  display: flex;
+  flex-direction: column;
+}
+.article__pic h2 {
+  margin-top: 2vh;
+  font-style: bold;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  height: 240px;
+  border-radius: 20px;
+  background-color: white;
+  margin: 2vh 0 2vh 0;
+}
+figure img {
+  height: 70%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+figure figcaption {
+  padding: 2.2vh 0 2.2vh 1.5vh;
+}
+figcaption p {
+  margin-top: 0.6vh;
+}
+
+/********************************* footer *************************/
+footer {
+  background-color: rgb(70, 70, 70);
+}
+footer a {
+  color: white;
+}
