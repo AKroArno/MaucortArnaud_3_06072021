@@ -1,11 +1,3 @@
-@font-face {
-  font-family: "shrikhand";
-  src: url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-}
-@font-face {
-  font-family: "roboto";
-  src: url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-}
 /******************** règles communes **********************/
 * {
   margin: 0;
@@ -19,7 +11,7 @@ ul {
   list-style-type: none;
 }
 body {
-  font-family: "shrikhand", Arial, Helvetica, sans-serif;
+  font-family: "roboto", Arial, Helvetica, sans-serif;
   list-style-type: none;
 }
 h3 {
@@ -39,7 +31,8 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2 rem;
+  font: 1.2 rem;
+  font-weight: bold;
 }
 .fa-map-marker-alt {
   transform: translateX(-30px);
@@ -52,7 +45,7 @@ h1 {
   padding: 4vh 3vh 1.5vh 3vh;
 }
 .phrasing {
-  padding: 0 3.5vh 4vh 3.5vh;
+  padding: 0 4vh 4vh 4vh;
 }
 /******************************* boutton **************************/
 button {
@@ -60,10 +53,32 @@ button {
   width: 220px;
   background-color: #9356dc;
   border-radius: 30px;
+  color: white;
+  border: solid #9356dc;
+  box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
 }
-.button__main {
+.button {
   display: flex;
   justify-content: center;
+}
+.btn {
+  margin-bottom: 7vh;
+  font-size: 1rem;
+}
+/******************************** choise__part ***********************/
+.choise__part {
+  display: flex;
+  flex-direction: column;
+}
+aside ol {
+  display: flex;
+  flex-direction: column;
+}
+/********************************* aside ******************************/
+aside li {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(235, 235, 235);
 }
 .article__pic {
   background-color: rgb(235, 235, 235);
@@ -82,6 +97,7 @@ figure {
   height: 240px;
   border-radius: 20px;
   background-color: white;
+  box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
   margin: 2vh 0 2vh 0;
 }
 figure img {
@@ -100,7 +116,24 @@ figcaption p {
 /********************************* footer *************************/
 footer {
   background-color: rgb(53, 53, 53);
+  color: white;
+  padding: 2.5vh;
 }
 footer a {
   color: white;
+}
+footer h2 {
+  font-family: "shrikhand", Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin-bottom: 2vh;
+}
+footer li {
+  margin: 1vh 0;
+}
+.fa-utensils {
+  padding-right: 3vw;
+}
+.fa-hands-helping {
+  padding-right: 1.5vw;
 }
