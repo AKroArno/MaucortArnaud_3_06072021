@@ -27,7 +27,7 @@ h3 {
 #link_map {
   height: 55px;
   width: 100%;
-  background-color: rgb(204, 204, 204);
+  background-color: rgb(234, 234, 234);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +39,7 @@ h3 {
 }
 .meta {
   text-align: center;
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(246, 246, 246);
 }
 h1 {
   padding: 4vh 3vh 1.5vh 3vh;
@@ -78,9 +78,13 @@ aside ol {
   display: flex;
   flex-direction: column;
 }
+aside li {
+  display: flex;
+  justify-content: center;
+}
 .choice__part li a {
   display: flex;
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(246, 246, 246);
   width: 300px;
   height: 50px;
   border-radius: 15px;
@@ -88,8 +92,19 @@ aside ol {
   margin: 2vw 0;
   box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
 }
+.choice__part a:hover {
+  background-color: rgb(246, 246, 246);
+}
+.choice__part a:hover i {
+  color: #9356dc;
+}
+.choice__part p {
+  font-weight: bold;
+}
 .choice__part i {
   margin-left: 30px;
+  color: #616161;
+  font-size: 1.1rem;
 }
 .fa-mobile-alt {
   margin-right: 35px;
@@ -98,18 +113,11 @@ aside ol {
   margin-right: 29px;
 }
 .fa-store {
-  margin-right: 27px;
-}
-
-/********************************* aside ******************************/
-aside li {
-  display: flex;
-  justify-content: center;
-  /* background-color: rgb(235, 235, 235); */
+  margin-right: 26px;
 }
 /****************************** restaurant part ***********************/
 .article__pic {
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(246, 246, 246);
   padding: 2.7vh;
   display: flex;
   flex-direction: column;
