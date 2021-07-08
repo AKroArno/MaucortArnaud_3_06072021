@@ -66,20 +66,48 @@ button {
   font-size: 1rem;
 }
 /******************************** choise__part ***********************/
-.choise__part {
+.choice__part {
   display: flex;
   flex-direction: column;
+  padding: 8vw 0;
+}
+.choice__part h2 {
+  margin: 0 0 3vw 10vw;
 }
 aside ol {
   display: flex;
   flex-direction: column;
 }
+.choice__part li a {
+  display: flex;
+  background-color: rgb(235, 235, 235);
+  width: 300px;
+  height: 50px;
+  border-radius: 15px;
+  align-items: center;
+  margin: 2vw 0;
+  box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
+}
+.choice__part i {
+  margin-left: 30px;
+}
+.fa-mobile-alt {
+  margin-right: 35px;
+}
+.fa-list-ul {
+  margin-right: 29px;
+}
+.fa-store {
+  margin-right: 27px;
+}
+
 /********************************* aside ******************************/
 aside li {
   display: flex;
   justify-content: center;
-  background-color: rgb(235, 235, 235);
+  /* background-color: rgb(235, 235, 235); */
 }
+/****************************** restaurant part ***********************/
 .article__pic {
   background-color: rgb(235, 235, 235);
   padding: 2.7vh;
