@@ -5,90 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5dd7170977.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Shrikhand&display=swap" rel="stylesheet">
   </head>
   <body>
     <hearder>
-      <div id="logo logo__header">
+      <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+      <div class="logo__header">
         <a href="#"><img src="images/logo/ohmyfood@2x.svg" alt="Logo oh my food"></a>
       </div>
     </hearder>
     <main>
       <header>
-        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="assiette délice des sens">
+        <img class="main__pic" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="assiette délice des sens">
       </header>
-      <article>
+      <article class="meal">
         <header>
-          <h2>Le délice des sens</h2>
+          <h1 class="h1__pages">Le délice des sens</h1><i class="far fa-heart"></i>
         </header>
-        <article class="starters">
-          <h4>entrées</h4>
-          <div class="dish_patch">
-            <h3>Tartare de thon</h3>
-            <p>Assaisonné au yuzu</p>
+        <article class="meal__patch">
+          <h4>ENTRÉES</h4>
+          <div class="dish__patch">
+            <div class="text">
+              <h3>Tartare de thon</h3>
+              <p>Assaisonné au yuzu</p>
+            </div>
             <div class="price">25€</div>
           </div>
-          <div class="dish_patch">
-            <h3>Bouchée de homard croustillant</h3>
-            <p>Et sa farandole de petits légumes</p>
+          <div class="dish__patch">
+            <div class="text">
+              <h3>Bouchée de homard croustillant</h3>
+              <p>Et sa farandole de petits légumes</p>
+            </div>
             <div class="price">35€</div>
           </div>
-          <div class="dish_patch">
-            <h3>Velouté de cèpes</h3>
-            <p>Aux truffes</p>
+          <div class="dish__patch">
+            <div class="text">
+              <h3>Velouté de cèpes</h3>
+              <p>Aux truffes</p>
+            </div>
             <div class="price">20€</div>
           </div>
         </article>
-        <article class="dishs">
-          <h4>plats</h4>
-          <div class="dish_patch">
-            <h3>Poulet rôti aux herbes de Provence</h3>
-            <p>Et sa crème de truffe</p>
+        <article class="meal__patch">
+          <h4>PLATS</h4>
+          <div class="dish__patch">
+            <div class="text">
+              <h3>Poulet rôti aux herbes de Provence</h3>
+              <p>Et sa crème de truffe</p>
+            </div>
             <div class="price">40€</div>
           </div>
-          <div class="dish_patch">
-            <h3>Langouste rôtie</h3>
-            <p>Et ses légumes de saison</p>
+          <div class="dish__patch">
+            <div class="text">
+              <h3>Langouste rôtie</h3>
+              <p>Et ses légumes de saison</p>
+            </div>
             <div class="price">35€</div>
           </div>
-          <div class="dish_patch">
-            <h3>Côte de boeuf Angus</h3>
-            <p>Et sa purée de panais</p>
+          <div class="dish__patch">
+            <div class="text">
+              <h3>Côte de boeuf Angus</h3>
+              <p>Et sa purée de panais</p>
+            </div>
             <div class="price">44€</div>
           </div>
         </article>
-        <article class="deserts">
-          <h4>dessert</h4>
-          <div class="dish_patch">
-            <h3>Farandole de desserts</h3>
-            <p>Du chef</p>
+        <article class="meal__patch">
+          <h4>DESSERTS</h4>
+          <div class="dish__patch">
+            <div class="text">
+              <h3>Farandole de desserts</h3>
+              <p>Du chef</p>
+            </div>
             <div class="price">18€</div>
           </div>
-          <div class="dish_patch">
-            <h3>Crème brulée</h3>
-            <p>Revisitée</p>
+          <div class="dish__patch">
+            <div class="text">
+              <h3>Crème brulée</h3>
+              <p>Revisitée</p>
+            </div>
             <div class="price">22€</div>
           </div>
-          <div class="dish_patch">
-            <h3>Tiramisu</h3>
-            <p>À la noisette</p>
+          <div class="dish__patch">
+            <div class="text">
+              <h3>Tiramisu</h3>
+              <p>À la noisette</p>
+            </div>
             <div class="price">23€</div>
           </div>
         </article>
-      </article>
-      <div class="button">
-        <button class="btn">Commander</button>
-      </div>    
+        <div class="button">
+          <button class="btn">Commander</button>
+        </div>
+      </article>   
     </main>
     <footer>
-      <div class="logo logo__footer">
-        <a href="#"><img src="images/logo/ohmyfood@2x.svg" alt="Logo oh my food"></a>
-      </div>
-      <li>
-        <ul>Proposer un restaurant</ul>
-        <ul>Devenir partenaire</ul>
-        <ul>Mentions légales</ul>
-        <ul>Contact</ul>
-      </li>
+      <h2>ohmyfood</h2>
+      <ul>
+        <li><a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
+        <li><a href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a></li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="mailto:adressemail@mail.com">Contact</a></li>
+      </ul>
     </footer>
   </body>
 </html>

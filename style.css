@@ -17,6 +17,9 @@ body {
 h3 {
   font-style: bold;
 }
+img {
+  object-fit: cover;
+}
 /********************************* header **********************/
 .logo__header {
   display: flex;
@@ -139,7 +142,6 @@ figure {
 figure img {
   height: 70%;
   width: 100%;
-  object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
 figure figcaption {
@@ -172,4 +174,54 @@ footer li {
 }
 .fa-hands-helping {
   padding-right: 1.5vw;
+}
+/*************************** pages restaurants *********************/
+.main__pic {
+  height: 300px;
+  width: 100%;
+}
+.h1__pages {
+  font-family: "shrikhand", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+.meal {
+  border-radius: 20px 20px 0 0;
+}
+.meal header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-right: 7vw;
+}
+.meal i {
+  font-size: large;
+  color: rgb(136, 136, 136);
+}
+.meal__patch {
+  display: flex;
+  flex-direction: column;
+}
+.meal__patch h4 {
+  font-weight: 200;
+  margin: 5vw 0 0 5vw;
+}
+.dish__patch {
+  display: flex;
+  background-color: rgb(246, 246, 246);
+  height: 60px;
+  width: 90%;
+  border-radius: 15px;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 2.5vw;
+}
+.text {
+  padding: 2vw;
+}
+.price {
+  align-self: flex-end;
+  padding: 2vw;
+}
+.meal button {
+  margin: 9vw 0 15vw 0;
 }
