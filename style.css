@@ -176,8 +176,13 @@ footer li {
   padding-right: 1.5vw;
 }
 /*************************** pages restaurants *********************/
+.fa-arrow-left {
+  font-size: 1.7rem;
+  position: absolute;
+  margin: 25px;
+}
 .main__pic {
-  height: 300px;
+  height: 350px;
   width: 100%;
 }
 .h1__pages {
@@ -186,6 +191,7 @@ footer li {
 }
 .meal {
   border-radius: 20px 20px 0 0;
+  background-color: rgb(246, 246, 246);
 }
 .meal header {
   display: flex;
@@ -207,7 +213,8 @@ footer li {
 }
 .dish__patch {
   display: flex;
-  background-color: rgb(246, 246, 246);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
   height: 60px;
   width: 90%;
   border-radius: 15px;
