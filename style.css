@@ -1,3 +1,13 @@
+/************************ keyframes ************************/
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 /******************** règles communes **********************/
 * {
   margin: 0;
@@ -20,6 +30,7 @@ h3 {
 img {
   object-fit: cover;
 }
+
 /********************************* header **********************/
 .logo__header {
   display: flex;
@@ -182,16 +193,15 @@ footer li {
   top: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: white;
 }
 .fa-arrow-left {
   font-size: 1.7rem;
-  margin-left: 25px;
-}
-.pages > .logo__header {
-  margin-right: 110px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
 .main__pic {
   height: 300px;
@@ -200,14 +210,15 @@ footer li {
   z-index: -2;
   top: 70px;
 }
-.h1__pages {
-  font-family: "shrikhand", Arial, Helvetica, sans-serif;
-  font-weight: 400;
-}
 .meal {
   border-radius: 20px 20px 0 0;
   background-color: rgb(246, 246, 246);
-  margin: 275px 0 0;
+  margin: 320px 0 0;
+  animation: slideIn 1s both;
+}
+.h1__pages {
+  font-family: "shrikhand", Arial, Helvetica, sans-serif;
+  font-weight: 400;
 }
 .meal header {
   display: flex;
@@ -240,10 +251,28 @@ footer li {
 }
 .text {
   padding: 2vw;
+  text-overflow: ellipsis;
+}
+.underline {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 .price {
   align-self: flex-end;
   padding: 2vw;
+}
+.checked {
+  display: none;
+  width: 50px;
+  background-color: #99e2d0;
+  border-radius: 0 15px 15px 0;
+}
+.rotation {
+  display: none;
+}
+.dish__patch:hover + .checked {
+  display: flex;
 }
 .meal button {
   margin: 9vw 0 15vw 0;
