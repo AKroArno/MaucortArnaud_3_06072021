@@ -79,6 +79,10 @@ button {
   margin-bottom: 7vh;
   font-size: 1rem;
 }
+.btn:hover {
+  transform: scale(1.06);
+  transition: 5ms ease-out;
+}
 /******************************** choise__part ***********************/
 .choice__part {
   display: flex;
@@ -115,10 +119,12 @@ aside ol {
   text-align: center;
   align-self: center;
   position: absolute;
-  left: 50px;
+  transform: translateX(-150px);
 }
 .choice__part a:hover {
-  background-color: rgb(246, 246, 246);
+  background-color: #feedff;
+  transform: scale(1.1);
+  transition: 5ms ease-out;
 }
 .choice__part a:hover i {
   color: #9356dc;
@@ -149,16 +155,24 @@ aside ol {
 }
 .article__pic h2 {
   margin-top: 2vh;
-  font-style: bold;
+}
+.restaurant__cards {
+  display: flex;
+  flex-direction: column;
+}
+.restaurant__cards figure:hover {
+  transform: scale(1.06);
+  transition: 5ms ease-out;
 }
 .new__patch {
   position: absolute;
+  right: 50px;
   background-color: #99e2d0;
   color: #008160;
   text-align: center;
   padding: 10px;
   font-weight: bold;
-  margin: 15px 0 0 270px;
+  transform: translateY(15px);
 }
 .line {
   height: 1.5px;
@@ -196,6 +210,9 @@ footer {
 footer a {
   color: white;
 }
+footer a:hover {
+  color: #9356dc;
+}
 footer h2 {
   font-family: "shrikhand", Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
@@ -206,10 +223,10 @@ footer li {
   margin: 1vh 0;
 }
 .fa-utensils {
-  padding-right: 3vw;
+  padding-right: 15px;
 }
 .fa-hands-helping {
-  padding-right: 1.5vw;
+  padding-right: 8px;
 }
 /*************************** pages restaurants *********************/
 .pages {
@@ -284,10 +301,6 @@ footer li {
   justify-content: space-between;
   width: 100%;
 }
-/* .price {
-  align-self: flex-end;
-  padding: 2vw;
-} */
 .checked {
   display: none;
   width: 50px;
@@ -302,4 +315,28 @@ footer li {
 }
 .meal button {
   margin: 9vw 0 15vw 0;
+}
+@media screen and (min-width: 1100px) {
+  .choice__part {
+    padding: 2.7vh;
+  }
+  .choice__part h2 {
+    margin: 0;
+  }
+  aside ol {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .article__pic figure {
+    width: 250px;
+  }
+  .restaurant__cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
