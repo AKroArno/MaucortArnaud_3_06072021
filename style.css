@@ -195,7 +195,22 @@ figure img {
   border-radius: 20px 20px 0 0;
 }
 figure figcaption {
+  display: flex;
   padding: 2.2vh 0 2.2vh 1.5vh;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurant__name {
+  flex-direction: column;
+}
+.restaurant__cards i {
+  font-size: large;
+}
+.heart {
+  padding-right: 15px;
+}
+.heart__full {
+  display: none;
 }
 figcaption p {
   margin-top: 0.6vh;
@@ -286,15 +301,20 @@ footer li {
   box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
   height: 60px;
   width: 90%;
+  max-width: 500px;
   border-radius: 15px;
   justify-content: space-between;
   margin: auto;
   margin-top: 2.5vw;
 }
 .text {
-  padding: 2vw;
+  padding-left: 2vw;
   text-overflow: ellipsis;
   width: 100%;
+  align-self: center;
+}
+.price {
+  padding-right: 2vw;
 }
 .underline {
   display: flex;
@@ -316,6 +336,7 @@ footer li {
 .meal button {
   margin: 9vw 0 15vw 0;
 }
+/***************************** version desktop ***************************/
 @media screen and (min-width: 1100px) {
   .choice__part {
     padding: 2.7vh;
@@ -333,6 +354,15 @@ footer li {
   .restaurant__cards {
     flex-direction: row;
     justify-content: space-between;
+  }
+  .dish__cards {
+    display: flex;
+  }
+  .dish__patch {
+    margin: 2vw;
+  }
+  .meal button {
+    margin: 2vw;
   }
   footer ul {
     display: flex;
