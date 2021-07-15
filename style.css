@@ -22,6 +22,8 @@ a:hover {
 }
 .btn:hover {
   cursor: pointer;
+  opacity: 0.8;
+  box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
 }
 ul {
   list-style-type: none;
@@ -42,6 +44,9 @@ img {
   display: flex;
   justify-content: center;
   padding: 3.2vh 0 2.2vh 0;
+}
+.logo__header:hover {
+  transform: scale(1.05);
 }
 /******************************** main **************************/
 #link_map {
@@ -71,11 +76,10 @@ h1 {
 button {
   height: 50px;
   width: 220px;
-  background: rgb(2, 0, 36);
   background: linear-gradient(0deg, #9356dc 0%, #fe79da 100%);
   border-radius: 30px;
   color: white;
-  box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
+  box-shadow: 0px 4px 4px 1px rgba(36, 36, 36, 0.1);
   border: none;
 }
 .button {
@@ -96,7 +100,6 @@ button {
 aside ul {
   display: flex;
   flex-direction: column;
-  /* position: relative; */
 }
 .choice__part li {
   display: flex;
@@ -110,8 +113,7 @@ aside ul {
   border-radius: 15px;
   align-items: center;
   margin: 2vw 0;
-  box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
-  /* position: relative; */
+  box-shadow: 0px 4px 4px 1px rgba(36, 36, 36, 0.1);
 }
 .num {
   background-color: #9356dc;
@@ -122,11 +124,11 @@ aside ul {
   text-align: center;
   align-self: center;
   position: absolute;
-  /* left: -10px; */
   transform: translateX(-150px);
 }
 .choice__part a:hover {
   background-color: #feedff;
+  box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
 }
 .choice__part a:hover i {
   color: #9356dc;
@@ -186,7 +188,7 @@ figure {
   height: 240px;
   border-radius: 20px;
   background-color: white;
-  box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
+  box-shadow: 0px 4px 4px 1px rgba(36, 36, 36, 0.1);
   margin: 2vh 0 2vh 0;
   position: relative;
 }
@@ -205,7 +207,8 @@ figure figcaption {
   flex-direction: column;
 }
 .restaurant__cards i {
-  font-size: large;
+  font-size: x-large;
+  color: rgb(136, 136, 136);
 }
 .heart {
   padding-right: 15px;
@@ -285,12 +288,8 @@ footer li {
   padding-right: 7vw;
 }
 .meal i {
-  font-size: large;
+  font-size: x-large;
   color: rgb(136, 136, 136);
-}
-.meal__patch {
-  display: flex;
-  flex-direction: column;
 }
 .meal__patch h4 {
   font-weight: 200;
@@ -299,7 +298,7 @@ footer li {
 .dish__patch {
   display: flex;
   background-color: rgb(255, 255, 255);
-  box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
+  box-shadow: 0px 4px 4px 1px rgba(36, 36, 36, 0.1);
   height: 60px;
   width: 90%;
   max-width: 500px;
@@ -310,7 +309,6 @@ footer li {
 }
 .text {
   padding-left: 2vw;
-  text-overflow: ellipsis;
   width: 100%;
   align-self: center;
 }
@@ -321,6 +319,12 @@ footer li {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+.underline p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 310px;
 }
 .checked {
   display: none;
@@ -353,18 +357,28 @@ footer li {
     flex-direction: row;
     justify-content: space-around;
   }
+  .menu {
+    display: flex;
+    justify-content: space-around;
+  }
+  .meal__patch {
+    flex: 1 30%;
+  }
   .restaurant__cards {
     flex-direction: row;
     justify-content: space-between;
   }
-  .dish__cards {
-    display: flex;
+  .meal header {
+    justify-content: space-around;
   }
   .dish__patch {
     margin: 2vw;
   }
   .meal button {
     margin: 2vw;
+  }
+  .button__homepage {
+    padding: 2vw;
   }
   footer ul {
     display: flex;
