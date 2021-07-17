@@ -281,14 +281,6 @@ aside ul {
 .restaurant__cards figure:hover {
   box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
 }
-@keyframes green-slide_in {
-  from {
-    transform: translate(0%);
-  }
-  to {
-    transform: translate(100%);
-  }
-}
 .new__patch {
   position: absolute;
   right: 15px;
@@ -336,8 +328,8 @@ figure figcaption {
 .heart {
   padding-right: 15px;
 }
-.heart__full {
-  display: none;
+.fa-heart:hover {
+  font-weight: bold;
 }
 figcaption p {
   margin-top: 0.6vh;
@@ -457,13 +449,31 @@ footer li {
   border-radius: 0 15px 15px 0;
   justify-content: center;
   align-items: center;
-  animation: dish__patch-slide 300ms 200ms both;
+  animation: dish__patch-slide 200ms 200ms both;
 }
 .dish__patch:hover i {
   transform: rotate(1turn);
   transition-duration: 300ms;
   transition-delay: 350ms;
 }
+.dish__patch:active .checked {
+  display: flex;
+  position: relative;
+  width: 60px;
+  height: 100%;
+  right: 0;
+  background-color: #99e2d0;
+  border-radius: 0 15px 15px 0;
+  justify-content: center;
+  align-items: center;
+  animation: dish__patch-slide 200ms 200ms both;
+}
+.dish__patch:active i {
+  transform: rotate(1turn);
+  transition-duration: 300ms;
+  transition-delay: 350ms;
+}
+
 @keyframes dish__patch-slide {
   0% {
     transform: translateX(50px);
