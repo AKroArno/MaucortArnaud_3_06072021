@@ -15,12 +15,32 @@
     transform: rotate(360deg);
   }
 }
+@keyframes lds-timing {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes lds-body {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /************************* loader **************************/
 .loader {
-  display: none;
+  display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
+  animation: lds-timing 3s 300ms both;
+}
+body {
+  animation: lds-body 3s 300ms both;
 }
 .lds-roller {
   display: inline-block;
@@ -256,6 +276,17 @@ aside ul {
   flex: 1 25%;
   padding: 1vw;
 }
+.restaurant__cards figure:hover {
+  box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
+}
+@keyframes green-slide_in {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(100%);
+  }
+}
 .new__patch {
   position: absolute;
   right: 15px;
@@ -410,7 +441,8 @@ footer li {
   justify-content: space-between;
   width: 100%;
 }
-.underline p {
+.underline p,
+.text h3 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -418,18 +450,28 @@ footer li {
 }
 .checked {
   display: none;
-  width: 50px;
+  width: 60px;
   background-color: #99e2d0;
   border-radius: 0 15px 15px 0;
+  justify-content: center;
+  align-items: center;
+}
+.checked i {
+  color: white;
 }
 .rotation {
-  display: none;
+  display: block;
 }
 .dish__patch:hover + .checked {
   display: flex;
 }
 .meal button {
   margin: 9vw 0 15vw 0;
+}
+/******************************** animation ******************************/
+.dish__patch:hover {
+  box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
+  cursor: pointer;
 }
 /***************************** version desktop ***************************/
 @media screen and (min-width: 1100px) {
