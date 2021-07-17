@@ -31,6 +31,8 @@
     opacity: 1;
   }
 }
+@keyframes green-slide {
+}
 /************************* loader **************************/
 .loader {
   display: flex;
@@ -39,7 +41,7 @@
   left: 50%;
   animation: lds-timing 3s 300ms both;
 }
-body {
+.main__body {
   animation: lds-body 3s 300ms both;
 }
 .lds-roller {
@@ -427,6 +429,23 @@ footer li {
   justify-content: space-between;
   margin: auto;
   margin-top: 2.5vw;
+  animation: dish__patch-slide 700ms 250ms both;
+}
+@keyframes dish__patch-slide {
+  0% {
+    transform: translateY(800px);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+  85% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .text {
   padding-left: 2vw;
@@ -439,7 +458,6 @@ footer li {
 .underline {
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 .underline p,
 .text h3 {
