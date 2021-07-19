@@ -33,12 +33,61 @@
 }
 @keyframes green-slide {
 }
+@-webkit-keyframes animationHeart {
+  0% {
+    background-size: 100% 0%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes animationHeart {
+  0% {
+    background-size: 100% 0%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+@keyframes smd {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes dish__patch-slide {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+  85% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /************************* loader **************************/
 .loader {
   display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translateX(-50px);
   animation: lds-timing 3s 300ms both;
 }
 .main__body {
@@ -47,8 +96,9 @@
 .lds-roller {
   display: inline-block;
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 100%;
+  height: 100%;
+  margin: 60% auto;
 }
 .lds-roller div {
   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
@@ -321,16 +371,28 @@ figure figcaption {
 .restaurant__name {
   flex-direction: column;
 }
-.restaurant__cards i {
-  font-size: x-large;
-  color: rgb(136, 136, 136);
-}
 .heart {
   padding-right: 15px;
+  display: flex;
 }
-.fa-heart:hover {
-  font-weight: bold;
+.ft {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: absolute;
 }
+.ft:hover {
+  cursor: pointer;
+  background: linear-gradient(#9356dc, #ff79da);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  -webkit-animation: animationHeart 0.5s linear;
+  animation: animationHeart 0.5s linear;
+}
+
 figcaption p {
   margin-top: 0.6vh;
 }
@@ -391,6 +453,7 @@ footer li {
   background-color: rgb(246, 246, 246);
   margin: 320px 0 0;
   animation: slideIn 1s both;
+  transition: 500ms ease-out;
 }
 .h1__pages {
   font-family: "shrikhand", Arial, Helvetica, sans-serif;
@@ -402,10 +465,6 @@ footer li {
   justify-content: space-between;
   padding-right: 7vw;
 }
-.meal i {
-  font-size: x-large;
-  color: rgb(136, 136, 136);
-}
 .meal__patch h4 {
   font-weight: 200;
   margin: 5vw 0 0 5vw;
@@ -415,27 +474,15 @@ footer li {
 }
 .meal__patch:nth-child(1) {
   animation-delay: 500ms;
+  transition: 500ms ease-out;
 }
 .meal__patch:nth-child(2) {
   animation-delay: 700ms;
+  transition: 500ms ease-out;
 }
 .meal__patch:nth-child(3) {
   animation-delay: 900ms;
-}
-
-@keyframes smd {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.4;
-  }
-  80% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
+  transition: 500ms ease-out;
 }
 .dish__patch {
   display: flex;
@@ -449,6 +496,9 @@ footer li {
   margin: auto;
   margin-top: 2.5vw;
   position: relative;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .text {
   padding-left: 2vw;
@@ -466,22 +516,26 @@ footer li {
 .checked i {
   color: white;
 }
+.dish__patch:hover {
+  box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
+  cursor: pointer;
+}
 .dish__patch:hover .checked {
   display: flex;
   position: relative;
-  width: 60px;
+  width: 70px;
   height: 100%;
   right: 0;
   background-color: #99e2d0;
   border-radius: 0 15px 15px 0;
   justify-content: center;
   align-items: center;
-  animation: dish__patch-slide 200ms 200ms both;
+  animation: dish__patch-slide 500ms 200ms both;
+  transition: 500ms ease-out;
 }
 .dish__patch:hover i {
   transform: rotate(1turn);
-  transition-duration: 300ms;
-  transition-delay: 350ms;
+  transition: 450ms 500ms ease-out;
 }
 .dish__patch:active .checked {
   display: flex;
@@ -493,37 +547,16 @@ footer li {
   border-radius: 0 15px 15px 0;
   justify-content: center;
   align-items: center;
-  animation: dish__patch-slide 200ms 200ms both;
+  animation: dish__patch-slide 500ms 200ms both;
+  transition: 500ms ease-out;
 }
 .dish__patch:active i {
-  transform: rotate(1turn);
-  transition-duration: 300ms;
-  transition-delay: 350ms;
+  transform: rotate(180deg);
+  transition: 450ms 500ms ease-out;
 }
 
-@keyframes dish__patch-slide {
-  0% {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-  70% {
-    transform: translateY(0);
-    opacity: 0.3;
-  }
-  85% {
-    opacity: 0.4;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .meal button {
   margin: 9vw 0 15vw 0;
-}
-/******************************** animation ******************************/
-.dish__patch:hover {
-  box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
-  cursor: pointer;
 }
 /***************************** version desktop ***************************/
 @media screen and (min-width: 1100px) {
