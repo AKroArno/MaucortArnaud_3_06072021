@@ -88,10 +88,10 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50px);
-  animation: lds-timing 3s 300ms both;
+  animation: lds-timing 5s 400ms both;
 }
 .main__body {
-  animation: lds-body 3s 300ms both;
+  animation: lds-body 5s 400ms both;
 }
 .lds-roller {
   display: inline-block;
@@ -194,13 +194,9 @@ body {
   font-family: "roboto", Arial, Helvetica, sans-serif;
   list-style-type: none;
 }
-h3 {
-  font-style: bold;
-}
 img {
   object-fit: cover;
 }
-
 /********************************* header **********************/
 .logo__header {
   display: flex;
@@ -229,10 +225,10 @@ img {
   background-color: rgb(246, 246, 246);
 }
 h1 {
-  padding: 4vh 3vh 1.5vh 3vh;
+  padding: 30px 22px 12px 12px;
 }
 .phrasing {
-  padding: 0 4vh 4vh 4vh;
+  padding: 0 30px 30px 30px;
 }
 /******************************* boutton **************************/
 button {
@@ -249,15 +245,15 @@ button {
   justify-content: center;
 }
 .btn {
-  margin-bottom: 7vh;
+  margin-bottom: 50px;
   font-size: 1rem;
 }
 /******************************** choise__part ***********************/
 .choice__part {
-  padding: 8vw 0;
+  padding: 40px 0;
 }
 .choice__part h2 {
-  margin: 0 0 3vw 10vw;
+  padding: 15px 0 15px 20px;
 }
 aside ul {
   display: flex;
@@ -274,7 +270,7 @@ aside ul {
   height: 50px;
   border-radius: 15px;
   align-items: center;
-  margin: 2vw 0;
+  margin: 8px 0;
   box-shadow: 0px 4px 4px 1px rgba(36, 36, 36, 0.1);
 }
 .num {
@@ -315,10 +311,10 @@ aside ul {
 /****************************** restaurant part ***********************/
 .article__pic {
   background-color: rgb(246, 246, 246);
-  padding: 2.7vh;
+  padding: 20px;
 }
 .article__pic h2 {
-  margin-top: 2vh;
+  margin-top: 15px;
 }
 .restaurant__cards {
   display: flex;
@@ -326,7 +322,7 @@ aside ul {
 }
 .restaurant__cards a {
   flex: 1 25%;
-  padding: 1vw;
+  padding: 5px;
 }
 .restaurant__cards figure:hover {
   box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
@@ -345,7 +341,7 @@ aside ul {
   height: 1.5px;
   width: 40px;
   background-color: #99e2d0;
-  margin-left: 5vw;
+  margin-left: 20px;
 }
 figure {
   display: flex;
@@ -354,7 +350,7 @@ figure {
   border-radius: 20px;
   background-color: white;
   box-shadow: 0px 4px 4px 1px rgba(36, 36, 36, 0.1);
-  margin: 2vh 0 2vh 0;
+  margin: 15px 0 15px 0;
   position: relative;
 }
 figure img {
@@ -362,9 +358,9 @@ figure img {
   width: 100%;
   border-radius: 20px 20px 0 0;
 }
-figure figcaption {
+figcaption {
   display: flex;
-  padding: 2.2vh 0 2.2vh 1.5vh;
+  padding: 16px 0 16px 11px;
   justify-content: space-between;
   align-items: center;
 }
@@ -392,16 +388,25 @@ figure figcaption {
   -webkit-animation: animationHeart 0.5s linear;
   animation: animationHeart 0.5s linear;
 }
-
-figcaption p {
-  margin-top: 0.6vh;
+.ft:active {
+  cursor: pointer;
+  background: linear-gradient(#9356dc, #ff79da);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  -webkit-animation: animationHeart 0.5s linear;
+  animation: animationHeart 0.5s linear;
 }
-
+figcaption p {
+  margin-top: 5px;
+}
 /********************************* footer *************************/
 footer {
   background-color: rgb(53, 53, 53);
   color: white;
-  padding: 2.5vh;
+  padding: 20px;
 }
 footer a {
   color: white;
@@ -413,10 +418,10 @@ footer h2 {
   font-family: "shrikhand", Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
   font-weight: 100;
-  margin-bottom: 2vh;
+  margin-bottom: 15px;
 }
 footer li {
-  margin: 1vh 0;
+  margin: 8px 0;
 }
 .fa-utensils {
   padding-right: 15px;
@@ -463,25 +468,25 @@ footer li {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  padding-right: 7vw;
+  padding-right: 30px;
 }
-.meal__patch h4 {
+.meal__patch h3 {
   font-weight: 200;
-  margin: 5vw 0 0 5vw;
+  margin: 20px 0 0 20px;
 }
 .meal__patch {
   animation: smd 600ms 700ms both;
 }
 .meal__patch:nth-child(1) {
-  animation-delay: 500ms;
-  transition: 500ms ease-out;
-}
-.meal__patch:nth-child(2) {
   animation-delay: 700ms;
   transition: 500ms ease-out;
 }
+.meal__patch:nth-child(2) {
+  animation-delay: 1000ms;
+  transition: 500ms ease-out;
+}
 .meal__patch:nth-child(3) {
-  animation-delay: 900ms;
+  animation-delay: 1300ms;
   transition: 500ms ease-out;
 }
 .dish__patch {
@@ -490,22 +495,22 @@ footer li {
   box-shadow: 0px 4px 4px 1px rgba(36, 36, 36, 0.1);
   height: 60px;
   width: 90%;
-  max-width: 380px;
+  max-width: 450px;
   border-radius: 15px;
   justify-content: space-between;
   margin: auto;
-  margin-top: 2.5vw;
+  margin-top: 20px;
   position: relative;
   overflow: hidden;
 }
 .text {
-  padding-left: 2vw;
+  padding-left: 8px;
   width: 100%;
   align-self: center;
   overflow: hidden;
-  max-width: 280px;
+  max-width: 400px;
 }
-.text h3 {
+.text h4 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -562,7 +567,7 @@ footer li {
 }
 
 .meal button {
-  margin: 9vw 0 15vw 0;
+  margin: 40px 0 60px 0;
 }
 /***************************** version desktop ***************************/
 @media screen and (min-width: 1100px) {
