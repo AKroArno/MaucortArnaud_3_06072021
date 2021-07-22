@@ -47,26 +47,20 @@
     background-size: 100% 100%;
   }
 }
-@keyframes smd {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.4;
-  }
-  80% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes dish__patch-slide {
   0% {
     transform: translateX(50px);
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes smd {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /************************* loader **************************/
@@ -195,7 +189,7 @@ img {
   transform: scale(1.05);
 }
 /******************************** main **************************/
-#link_map {
+#link__map {
   height: 55px;
   width: 100%;
   background-color: rgb(234, 234, 234);
@@ -205,12 +199,12 @@ img {
   font: 1.4 rem;
   font-weight: bold;
 }
-#link_map input {
+#link__map input {
   background-color: rgb(234, 234, 234);
   border: none;
   font-weight: bold;
 }
-#link_map input::placeholder {
+#link__map input::placeholder {
   color: black;
 }
 .fa-map-marker-alt {
@@ -221,10 +215,13 @@ img {
   background-color: rgb(246, 246, 246);
 }
 h1 {
-  padding: 30px 22px 12px 12px;
+  font-size: 1.7rem;
+  padding: 30px 50px;
 }
 h2 {
   padding: 0 30px 30px 30px;
+  font-weight: 100;
+  font-size: 1.1rem;
 }
 /******************************* boutton **************************/
 button {
@@ -249,7 +246,7 @@ button {
   padding: 40px 0;
 }
 .choice__part h3 {
-  padding: 15px 0;
+  padding: 15px 25px;
 }
 aside ul {
   display: flex;
@@ -310,7 +307,8 @@ aside ul {
   padding: 20px;
 }
 .article__pic h3 {
-  margin-top: 15px;
+  margin: 15px 0px;
+  padding-left: 5px;
 }
 .restaurant__cards {
   display: flex;
@@ -340,7 +338,6 @@ figure {
   border-radius: 20px;
   background-color: white;
   box-shadow: 0px 4px 4px 1px rgba(36, 36, 36, 0.1);
-  margin: 15px 0 15px 0;
   position: relative;
 }
 figure img {
@@ -453,6 +450,7 @@ footer li {
 .h1__pages {
   font-family: "shrikhand", Arial, Helvetica, sans-serif;
   font-weight: 400;
+  padding: 15px;
 }
 .meal header {
   display: flex;
@@ -462,11 +460,13 @@ footer li {
 }
 .meal__patch h3 {
   font-weight: 200;
-  margin: 20px 0 0 20px;
+}
+.title {
+  padding: 15px;
 }
 .meal__patch {
   flex: 1 30%;
-  animation: smd 600ms 500ms both;
+  animation: smd 1500ms 500ms both;
 }
 .meal__patch:nth-child(1) {
   animation-delay: 900ms;
@@ -484,17 +484,17 @@ footer li {
   height: 1.5px;
   width: 40px;
   background-color: #99e2d0;
-  margin-left: 20px;
+  padding-left: 15px;
 }
 .dish__cards {
   margin: auto;
   position: relative;
+  padding: 15px;
 }
 .dish__patch {
   display: flex;
   padding: 15px;
   border-radius: 15px;
-  margin: 15px 0;
   box-shadow: 0px 4px 4px 1px rgba(36, 36, 36, 0.1);
   overflow: hidden;
   flex: 1 30%;
@@ -572,7 +572,7 @@ footer li {
     padding: 25px;
   }
   .choice__part h3 {
-    margin: 0;
+    padding: 0;
   }
   .choice__part ul {
     display: flex;
