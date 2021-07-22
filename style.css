@@ -64,17 +64,9 @@
 @keyframes dish__patch-slide {
   0% {
     transform: translateX(50px);
-    opacity: 0;
-  }
-  70% {
-    transform: translateY(0);
-    opacity: 0.3;
-  }
-  85% {
-    opacity: 0.4;
   }
   100% {
-    opacity: 1;
+    transform: translateY(0);
   }
 }
 /************************* loader **************************/
@@ -197,7 +189,7 @@ img {
 .logo__header {
   display: flex;
   justify-content: center;
-  padding: 3.2vh 0 2.2vh 0;
+  padding: 30px 0 20px 0;
 }
 .logo__header:hover {
   transform: scale(1.05);
@@ -210,7 +202,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  font: 1.2 rem;
+  font: 1.4 rem;
   font-weight: bold;
 }
 #link_map input {
@@ -340,12 +332,6 @@ aside ul {
   text-align: center;
   padding: 10px;
   font-weight: bold;
-}
-.line {
-  height: 1.5px;
-  width: 40px;
-  background-color: #99e2d0;
-  margin-left: 20px;
 }
 figure {
   display: flex;
@@ -479,40 +465,46 @@ footer li {
   margin: 20px 0 0 20px;
 }
 .meal__patch {
-  animation: smd 600ms 700ms both;
+  flex: 1 30%;
+  animation: smd 600ms 500ms both;
 }
 .meal__patch:nth-child(1) {
-  animation-delay: 700ms;
-  transition: 500ms ease-out;
+  animation-delay: 900ms;
+  transition: 700ms ease-in;
 }
 .meal__patch:nth-child(2) {
-  animation-delay: 1000ms;
-  transition: 500ms ease-out;
+  animation-delay: 1200ms;
+  transition: 700ms ease-out;
 }
 .meal__patch:nth-child(3) {
-  animation-delay: 1300ms;
-  transition: 500ms ease-out;
+  animation-delay: 1500ms;
+  transition: 700ms ease-out;
+}
+.line {
+  height: 1.5px;
+  width: 40px;
+  background-color: #99e2d0;
+  margin-left: 20px;
+}
+.dish__cards {
+  margin: auto;
+  position: relative;
 }
 .dish__patch {
   display: flex;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 4px 4px 1px rgba(36, 36, 36, 0.1);
-  height: 60px;
-  width: 90%;
-  max-width: 450px;
+  padding: 15px;
   border-radius: 15px;
-  justify-content: space-between;
-  margin: auto;
-  margin-top: 20px;
-  position: relative;
+  margin: 15px 0;
+  box-shadow: 0px 4px 4px 1px rgba(36, 36, 36, 0.1);
   overflow: hidden;
+  flex: 1 30%;
+  max-width: 380px;
 }
 .text {
-  padding-left: 8px;
-  width: 100%;
-  align-self: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
-  max-width: 400px;
+  flex: 1;
 }
 .text h4 {
   white-space: nowrap;
@@ -524,53 +516,49 @@ footer li {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.checked {
+  display: flex;
+  background-color: #99e2d0;
+  justify-content: center;
+  align-items: center;
+  margin: -20px -90px -20px 15px;
+  width: 70px;
+  transition-duration: 0.7s;
+}
 .price {
+  display: flex;
   align-self: flex-end;
-  padding: 0 20px 10px;
+  justify-content: flex-end;
+  padding: 0 15px;
+  font-weight: bold;
 }
 .checked i {
+  font-size: 1.5rem;
   color: white;
 }
 .dish__patch:hover {
   box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
-  cursor: pointer;
 }
-.dish__patch:hover .checked {
-  display: flex;
-  position: relative;
-  width: 70px;
-  height: 100%;
-  right: 0;
-  background-color: #99e2d0;
-  border-radius: 0 15px 15px 0;
-  justify-content: center;
-  align-items: center;
-  animation: dish__patch-slide 500ms 200ms both;
-  transition: 500ms ease-out;
+.dish__patch:active {
+  box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
 }
 .dish__patch:hover i {
   transform: rotate(1turn);
-  transition: 450ms 500ms ease-out;
-}
-.dish__patch:hover .price {
-  transition-duration: 0.5s;
-}
-.dish__patch:active .checked {
-  display: flex;
-  position: relative;
-  width: 60px;
-  height: 100%;
-  right: 0;
-  background-color: #99e2d0;
-  border-radius: 0 15px 15px 0;
-  justify-content: center;
-  align-items: center;
-  animation: dish__patch-slide 500ms 200ms both;
-  transition: 500ms ease-out;
+  transition: 450ms 200ms ease-out;
 }
 .dish__patch:active i {
-  transform: rotate(180deg);
-  transition: 450ms 500ms ease-out;
+  transform: rotate(1turn);
+  transition: 450ms 200ms ease-out;
+}
+.dish__patch:hover .checked {
+  margin-right: -20px;
+  box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
+  cursor: pointer;
+}
+.dish__patch:active .checked {
+  margin-right: -20px;
+  box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
+  cursor: pointer;
 }
 .meal button {
   margin: 40px 0 60px 0;
@@ -581,7 +569,7 @@ footer li {
     margin: 0;
   }
   .choice__part {
-    padding: 2.7vh;
+    padding: 25px;
   }
   .choice__part h3 {
     margin: 0;
