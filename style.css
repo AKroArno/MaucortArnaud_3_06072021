@@ -583,8 +583,8 @@ footer li {
     display: flex;
     justify-content: space-around;
   }
-  .meal__patch {
-    flex: 1 30%;
+  .title {
+    padding: 15px 15px 15px 45px;
   }
   .restaurant__cards {
     flex-direction: row;
