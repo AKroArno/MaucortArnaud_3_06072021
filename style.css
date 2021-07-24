@@ -577,8 +577,6 @@ footer li {
   }
   .restaurant__cards {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
   }
   .restaurant__cards figure {
     margin: 0 10px;
@@ -594,7 +592,7 @@ footer li {
     justify-content: space-around;
   }
   .meal__patch {
-    max-width: 450px;
+    max-width: 550px;
   }
   .dish__patch {
     margin: 25px;
