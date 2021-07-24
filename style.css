@@ -312,13 +312,15 @@ aside ul {
   margin: 15px 0px;
   padding-left: 5px;
 }
-.restaurant__cards {
-  display: flex;
+.restaurant__cards figure {
+  flex: 1;
   flex-direction: column;
-}
-.restaurant__cards a {
-  flex: 1 25%;
-  padding: 5px;
+  height: 240px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 4px 1px rgba(36, 36, 36, 0.1);
+  position: relative;
+  margin: 15px 0;
 }
 .restaurant__cards figure:hover {
   box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
@@ -332,15 +334,6 @@ aside ul {
   text-align: center;
   padding: 10px;
   font-weight: bold;
-}
-figure {
-  display: flex;
-  flex-direction: column;
-  height: 240px;
-  border-radius: 20px;
-  background-color: white;
-  box-shadow: 0px 4px 4px 1px rgba(36, 36, 36, 0.1);
-  position: relative;
 }
 figure img {
   height: 70%;
@@ -583,8 +576,12 @@ footer li {
     justify-content: space-around;
   }
   .restaurant__cards {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+  .restaurant__cards figure {
+    margin: 0 10px;
   }
   .menu {
     display: flex;
