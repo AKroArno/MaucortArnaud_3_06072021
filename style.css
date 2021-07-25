@@ -72,7 +72,7 @@
   transform: translateX(-50px);
   animation: lds-timing 5s 400ms both;
 }
-.main__body {
+.full__doc {
   animation: lds-body 5s 600ms both;
 }
 .lds-roller {
@@ -196,6 +196,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 3px solid #dedede;
 }
 #link__map input {
   background-color: rgb(234, 234, 234);
@@ -476,10 +477,11 @@ footer li {
   transition: 700ms ease-out;
 }
 .line {
-  height: 1.5px;
-  width: 40px;
+  height: 3px;
+  width: 30px;
   background-color: #99e2d0;
   padding-left: 15px;
+  margin-top: 5px;
 }
 .dish__cards {
   display: flex;
