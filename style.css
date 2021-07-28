@@ -47,14 +47,6 @@
     background-size: 100% 100%;
   }
 }
-@keyframes dish__patch-slide {
-  0% {
-    transform: translateX(50px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 @keyframes smd {
   0% {
     opacity: 0;
@@ -420,7 +412,6 @@ footer li {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: white;
 }
 .fa-arrow-left {
@@ -461,7 +452,7 @@ footer li {
   padding: 15px;
 }
 .meal__patch {
-  flex: 1 30%;
+  flex: 1;
   animation: smd 1500ms 500ms both;
 }
 .meal__patch:nth-child(1) {
@@ -524,9 +515,7 @@ footer li {
   transition-duration: 0.7s;
 }
 .price {
-  display: flex;
   align-self: flex-end;
-  justify-content: flex-end;
   padding: 0 15px;
   font-weight: bold;
 }
@@ -557,7 +546,6 @@ footer li {
 .dish__patch:active .checked {
   margin-right: -20px;
   box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.36);
-  cursor: pointer;
 }
 .meal button {
   margin: 40px 0 60px 0;
